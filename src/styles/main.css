@@ -1,0 +1,143 @@
+.appContainer {
+    background-color: black;
+    min-height: 100vh;
+}
+
+.innerContainer {
+    width: 80%;
+}
+
+.row {
+    margin: 0px !important;
+}
+
+.profilePic {
+    width: 200px !important;
+    height: auto;
+}
+
+.sideLine {
+    background-color: pink;
+    width: 5px;
+    height: 250px;
+    opacity: 0;
+    animation: sideLineComesDown .3s linear 1 alternate forwards;
+}
+
+@keyframes sideLineComesDown {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    90% {
+        transform: translateY(5%);
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.infoBox {
+    display: inline-block !important;
+}
+
+.infoText {
+    border-right: 5px solid black;
+    padding-right: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    letter-spacing: 10px;
+    opacity: 0;
+}
+
+.text-name {
+    animation: .5s typing .5s steps(8) forwards, cursor .4s step-end alternate forwards;
+}
+
+.text-role {
+    animation: .5s typing .8s steps(8) forwards, cursor .4s step-end alternate forwards;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+        opacity: 1;
+    }
+
+    to {
+        width: 100%;
+        opacity: 1;
+        border: none;
+    }
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+.landingContainer {
+    height: calc(100vh - 100px);
+}
+
+.git svg,
+.linkedin svg {
+    width: 30px;
+    height: 30px;
+    animation: fromDown .3s linear 1.3s alternate forwards;
+    opacity: 0;
+}
+
+
+@keyframes fromDown {
+    0% {
+        transform: translateY(50%);
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.aboutButton {
+    background: transparent;
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: 5px 10px;
+    opacity: 0;
+    animation: fromDown .3s linear 1.5s alternate forwards;
+    width: max-content;
+
+}
+
+
+.aboutContainer {
+    background-color: white;
+}
+
+.aboutContainer * {
+    letter-spacing: 2px;
+    color: black;
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .innerContainer {
+        width: 100%;
+    }
+
+    .sideLine {
+        background-color: pink;
+        width: 5px;
+        height: 220px;
+        opacity: 0;
+        animation: sideLineComesDown .3s linear 1 alternate forwards;
+    }
+}
