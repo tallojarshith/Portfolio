@@ -35,7 +35,7 @@ const Landing = () => {
                                 </div>
 
                             </div>
-                            <button className='hoverElements blackBtn aboutButton mt-3'><a href='#projects'>About Me</a></button>
+                            <button className='hoverElements blackBtn aboutButton mt-3'><a href='#about'>About Me</a></button>
                         </div>
                     </div>
                 </div>
