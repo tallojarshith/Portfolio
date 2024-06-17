@@ -1,0 +1,11 @@
+# netlify.toml
+
+[build]
+  # Command to run to build your site
+  command = "npm run build"
+  # Directory to publish to Netlify
+  publish = "build"
+
+[build.environment]
+  # Specify the Node.js version to use (match this with your local version)
+  NODE_VERSION = "v22.3.0"
