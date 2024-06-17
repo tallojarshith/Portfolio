@@ -51,6 +51,7 @@
     width: 100%;
     letter-spacing: 10px;
     opacity: 0;
+
 }
 
 .text-name {
@@ -83,14 +84,22 @@
 
 .landingContainer {
     height: calc(100vh - 100px);
+
 }
 
+
+
 .git svg,
-.linkedin svg {
+.linkedin svg,
+.medium svg {
     width: 30px;
     height: 30px;
     animation: fromDown .3s linear 1.3s alternate forwards;
     opacity: 0;
+}
+
+.innerParaAnimation {
+    animation: fromDown .2s linear forwards;
 }
 
 
@@ -105,15 +114,9 @@
     }
 }
 
-.aboutButton {
-    background: transparent;
-    border-radius: 5px;
-    border: 1px solid white;
-    padding: 5px 10px;
-    opacity: 0;
-    animation: fromDown .3s linear 1.5s alternate forwards;
-    width: max-content;
-
+.aboutButton a {
+    text-decoration: none;
+    color: white;
 }
 
 
@@ -126,11 +129,336 @@
     color: black;
 }
 
+.whiteBtn {
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.blackBtn {
+    background: transparent;
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: 5px 10px;
+    opacity: 0;
+    animation: fromDown .3s linear 1.5s alternate forwards;
+    width: max-content;
+}
+
+
+.para {
+    text-align: justify;
+    text-wrap: wrap;
+}
+
+.outerSkillShell {
+    width: 100%;
+    background-color: black;
+    height: 5px;
+    margin-top: -10px;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.w80 {
+    width: 80%;
+    height: 100%;
+    background-color: rgb(160, 204, 253);
+    animation: colorFromLeft .5s linear forwards;
+    transform-origin: left;
+}
+
+.w90 {
+    width: 90%;
+    height: 100%;
+    background-color: rgb(160, 204, 253);
+    animation: colorFromLeft90 .5s linear forwards;
+    transform-origin: left;
+}
+
+.w70 {
+    width: 70%;
+    height: 100%;
+    background-color: rgb(160, 204, 253);
+    animation: colorFromLeft70 .5s linear forwards;
+    transform-origin: left;
+}
+
+
+@keyframes colorFromLeft80 {
+    0% {
+        width: 0;
+        background-color: black;
+    }
+
+    100% {
+        width: 80%;
+        background-color: rgb(160, 204, 253);
+    }
+}
+
+@keyframes colorFromLeft90 {
+    0% {
+        width: 0;
+        background-color: black;
+    }
+
+    100% {
+        width: 90%;
+        background-color: rgb(160, 204, 253);
+    }
+}
+
+@keyframes colorFromLeft70 {
+    0% {
+        width: 0;
+        background-color: black;
+    }
+
+    100% {
+        width: 70%;
+        background-color: rgb(160, 204, 253);
+    }
+}
+
+@keyframes fromLeft {
+    0% {
+        transform: translateY(-50%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.pageLength {
+    height: 100%;
+    width: 5px;
+    background-color: rgb(168, 162, 219);
+    position: fixed;
+    z-index: 999;
+    right: 0;
+    scale: 1 0;
+    transform-origin: top;
+    animation: PageLengthAnimation linear;
+    animation-timeline: scroll();
+}
+
+@keyframes PageLengthAnimation {
+    to {
+        scale: 1 1;
+    }
+
+}
+
+
+.experienceContainer {
+    background-color: white;
+
+    padding: 50px 0px;
+    min-height: 400px;
+}
+
+.experienceContainer * {
+    color: black !important;
+}
+
+.expInfoInnerContainer {
+    position: relative;
+}
+
+.expInfoContainer {
+    height: 500px;
+    overflow-y: auto;
+}
+
+.removeExpInfoItem {
+    animation: removeExpInfoItem 1s linear forwards;
+    opacity: 1;
+}
+
+@keyframes removeExpInfoItem {
+    0% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+    10% {
+        display: none;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+        transform: translateX(200%);
+    }
+
+}
+
+
+.addExpInfoItem {
+    animation: addExpInfoItem .5s linear forwards;
+    opacity: 0;
+}
+
+
+.expInfo-list-item {
+    position: absolute;
+}
+
+.ExpList-group-item {
+    padding: 10px 0px;
+    color: white;
+    text-decoration: none;
+}
+
+.expActive,
+.expCardHeading {
+    color: #a0ccfd !important;
+}
+
+
+@keyframes addExpInfoItem {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+}
+
+.containerForMobile details {
+    padding: 15px 10px;
+}
+
+
+.spacer {
+    height: 10px;
+    width: 100%;
+}
+
+.projectCard {
+    opacity: 0;
+}
+
+.projectCardAnimation {
+    opacity: 0;
+    animation: fromDown .2s linear forwards;
+}
+
+.projectCardDes {
+    text-align: justify;
+}
+
+.projectBtn a {
+    color: white !important;
+    text-decoration: none;
+}
+
+
+.singleProjectContainer {
+    background-color: black;
+    min-height: 100vh;
+}
+
+.singleProjectMainHeading {
+    font-size: 24px;
+    padding: 20px;
+    text-align: center;
+}
+
+.singleProjectHeading {
+    font-size: 20px;
+    padding: 10px;
+    color: rgb(146, 188, 228);
+}
+
+.singleProjectContent1 {
+    opacity: 0;
+    animation: fromDown .2s linear forwards;
+}
+
+.singleProjectContent2 {
+    opacity: 0;
+    animation: fromDown .2s linear .1s forwards;
+}
+
+.singleProjectContent3 {
+    opacity: 0;
+    animation: fromDown .2s linear .3s forwards;
+}
+
+.singleProjectContent4 {
+    opacity: 0;
+    animation: fromDown .2s linear .5s forwards;
+}
+
+.singleProjectContent5 {
+    opacity: 0;
+    animation: fromDown .2s linear .7s forwards;
+}
+
+
+#navbar * {
+    color: white;
+
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    background-color: black;
+    width: 100%;
+    z-index: 999 !important;
+}
+
+.hoverElements {
+    transition: all .2s linear;
+}
+
+.hoverElements:hover {
+    transform: scale(1.2);
+}
+
+.footer {
+    height: 100px;
+    width: 100%;
+}
+
+.certificatesContainer {
+    background-color: white;
+}
+
+.certificatesContainer * {
+    color: black;
+}
 
 @media screen and (max-width: 767px) {
 
+    #navbar {
+        position: relative;
+
+    }
+
     .innerContainer {
         width: 100%;
+    }
+
+    .infoText {
+        font-size: 24px;
     }
 
     .sideLine {
